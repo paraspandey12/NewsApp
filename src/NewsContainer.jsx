@@ -12,7 +12,7 @@ const NewsContainer = () => {
     useEffect(() => {
         const fetchNews = async () => {
             const url = 'https://api.worldnewsapi.com/top-news?source-country=us&language=en';
-            const apiKey = 'a68873976540473da0dcd458e33d3255';
+            const apiKey = process.env.REACT_APP_API_KEY;
 
             try {
                 const response = await fetch(url, {
